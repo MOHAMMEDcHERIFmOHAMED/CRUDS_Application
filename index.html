@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS_Application</title>
+    <style>
+             * {
+            color: white;
+        }
+        :root {
+            --body-color: hsl(233, 13%, 12%);
+            --employee-color1: hsl(240, 11%, 11%);
+            --employee-color2: hsl(240, 6%, 16%);
+        }
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: var(--body-color);
+            gap: 20px;
+        }
+        header {
+            margin: 30px 0;
+            text-align: center;
+            width: 50%;
+        }
+        .input_sec {
+            width: 65%;
+            padding: 20px;
+            height: 45%;
+        }
+        .inputs {
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 95%;
+            height: 90%;
+        }
+        input {
+            color: black;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 5px;
+            width: 95%;
+            height: 40px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            margin-top: 5px;
+        }
+        label {
+            font-size: 18px;
+            font-weight: 900;
+        }
+        .sub_btn {
+            font-size: 18px;
+            font-weight: 400;
+            padding: 15px;
+            background-color: green;
+            border: none;
+            outline: none;
+            color: black;
+            border-radius: 10px;
+            height: 40px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        /* ______ outputs section __________ */
+        .outputs_sec {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+        .titles {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            height: 60px;
+            width: 80%;
+            background-color: black;
+            display: grid;
+            text-align: center;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .titles h1 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .employee_info {
+            text-align: center;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-bottom: solid 1px gray;
+        }
+        .outputs_info {
+            width: 80%;
+        }
+        .employee_info:nth-child(odd) {
+            background-color: var(--employee-color1);
+        }
+        .employee_info:nth-child(even) {
+            background-color: var(--employee-color2);
+        }
+        .edit_btn {
+            color: black;
+            background-color: yellow;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .delete_btn {
+            color: white;
+            background-color: red;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>CRUDS Application</h1></header>
+    <section class="input_sec">
+        <div class="inputs">
+            <div>
+                <label for="txt">First Name</label>
+                <input id="txt" type="text" placeholder="enter epmloyee's name ">
+            </div>
+            <div>
+                <label for="name">Last Name</label>
+                <input id="name" type="text" placeholder="enter epmloyee's Last name ">
+            </div>
+            <div>
+                <label for="roll">Roll No</label>
+                <input id="roll" type="text" placeholder="enter epmloyee's Roll NO ">
+            </div>
+        </div>
+        <button type="submit" class="sub_btn" >ADD Employee</button>
+
+    </section>
+    <section class="outputs_sec">
+        <span class="titles" >
+            <h1>First Name</h1>
+            <h1>Last Name</h1>
+            <h1>Roll No</h1>
+            <h1>Acitons</h1>
+        </span>
+        <div class="outputs_info">
+         
+        </div>
+        
+       
+    </section>
+
+    <script src="cruds02.js" ></script>
+</body>
+</html>
