@@ -31,13 +31,13 @@ function addEmployee(){
     }
    
    arr.push(newEmployee);
-   //    update the storag 
+   //    update the storage 
 
    localStorage.setItem('employee' , JSON.stringify(arr) );
    showEmployees();
    clearInputs();
 }
-// console.log(arr);
+
  
 function showEmployees(){
     localStorage.setItem('employee' , JSON.stringify(arr) );
